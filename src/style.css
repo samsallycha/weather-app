@@ -1,0 +1,68 @@
+a,
+a:hover,
+a:visited {
+  color: #000000;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h4,
+p {
+  font-weight: bold;
+  text-align: center;
+}
+
+.card {
+  background-color: rgb(255, 247, 254);
+  margin: 20px auto;
+  max-width: 650px;
+}
+
+.day {
+  font-size: 20px;
+  text-align: center;
+}
+
+.fas {
+  display: inline-block;
+  font-size: 26px;
+  text-align: center;
+}
+
+.fa-cloud {
+  font-size: 65px;
+  text-align: center;
+}
+
+.search-city {
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.temp {
+  font-size: 20px;
+  text-align: center;
+}
+
+.temperature {
+  font-size: 45px;
+  font-weight: bold;
+  line-height: 45px;
+  text-align: center;
+}
+
+.unit {
+  display: inline;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.upcoming {
+  line-height: 48px;
+  margin: 0 auto;
+  padding: 20px;
+  width: 60%;
+}

@@ -58,6 +58,11 @@ li {
   cursor: default;
 }
 
+.date {
+  color: #5c636a;
+  font-size: 10px;
+}
+
 .footer {
   font-size: 14px;
   line-height: 0;
@@ -72,6 +77,11 @@ li {
   display: flex;
   line-height: 48px;
   margin: 20px 0 0;
+}
+
+.humidity,
+.wind-speed {
+  font-size: 12px;
 }
 
 .temperature {

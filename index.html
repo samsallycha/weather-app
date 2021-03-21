@@ -20,61 +20,80 @@
   </head>
   <body>
     <div class="container">
-      <div class="card">
+      <div class="card bg-light border-light mb-3 rounded text-center">
         <form>
           <div class="row">
-            <div class="col">
+            <div class="col-6">
               <input
                 type="text"
                 class="form-control form-control-sm"
                 placeholder="Enter city"
               />
             </div>
-            <div class="col">
-              <button type="submit" class="btn btn-dark btn-sm">Search</button>
-              <button class="btn btn-light btn-sm">Geolocate</button>
+            <div class="col-2 search-button">
+              <button type="submit" class="btn-sm btn btn-dark">Search</button>
+            </div>
+            <div class="col-4 geolocate-button">
+              <button class="btn-sm btn btn-outline-secondary">
+                Geolocate
+              </button>
             </div>
           </div>
         </form>
         <div class="row">
-          <div class="col-6">
+          <div class="col-6 current">
+            <ul>
+              <li><i class="current-icon bi bi-sun-fill"></i></li>
+              <li><h1>Cloudy</h1></li>
+              <li>
+                <span class="temperature">7</span
+                ><span class="units">
+                  <small><a href="#">°C</a> | <a href="#">°F</a></small></span
+                >
+              </li>
+            </ul>
+            <ul>
+              <li><h3>New York</h3></li>
+              <li><h5>Sunday 13:24</h5></li>
+            </ul>
+          </div>
+          <div class="col-3 forecast forecast-days">
+            <ul>
+              <li>Monday</li>
+              <li>Tuesday</li>
+              <li>Wednesday</li>
+              <li>Thursday</li>
+              <li>Friday</li>
+            </ul>
+          </div>
+          <div class="col-1 forecast forecast-icons">
             <ul>
               <li><i class="bi bi-sun-fill"></i></li>
-              <li>Cloudy</li>
-              <li>7<a href="#">°C</a>|<a href="#">°F</a></li>
+              <li><i class="bi bi-cloud-drizzle-fill"></i></li>
+              <li><i class="bi bi-cloud-fog-fill"></i></li>
+              <li><i class="bi bi-cloud-rain-fill"></i></li>
+              <li><i class="bi bi-cloud-sun-fill"></i></li>
             </ul>
+          </div>
+          <div class="col-1 forecast forecast-temperature">
             <ul>
-              <li>New York</li>
-              <li>Sunday 13:24</li>
+              <li>12°</li>
+              <li>24°</li>
+              <li>42°</li>
+              <li>2°</li>
+              <li>10°</li>
             </ul>
-          </div>
-          <div class="col-2">
-            <ul>
-              <li>Mon</li>
-              <li>Tue</li>
-              <li>Wed</li>
-              <li>Thu</li>
-              <li>Fri</li>
-            </ul>
-          </div>
-          <div class="col-2">
-            <li><i class="bi bi-sun-fill"></i></li>
-            <li><i class="bi bi-sun-fill"></i></li>
-            <li><i class="bi bi-sun-fill"></i></li>
-            <li><i class="bi bi-sun-fill"></i></li>
-            <li><i class="bi bi-sun-fill"></i></li>
-          </div>
-          <div class="col-2">
-            <li>12°</li>
-            <li>12°</li>
-            <li>12°</li>
-            <li>12°</li>
-            <li>12°</li>
           </div>
         </div>
       </div>
-      <a href="https://github.com/samsallycha/weather-app">Open-source code</a>
-      by SS
+      <div class="footer">
+        <small>
+          <a href="https://github.com/samsallycha/weather-app"
+            >Open-source code</a
+          >
+          by SS
+        </small>
+      </div>
     </div>
     <script src="src/script.js"></script>
   </body>

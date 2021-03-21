@@ -1,68 +1,78 @@
 a,
-a:hover,
 a:visited {
   color: #000000;
   text-decoration: none;
 }
 
-h1,
-h2,
-h4,
-p {
+a:hover {
+  color: #ff8c9b;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+form {
+  margin: 0 auto;
+}
+
+h1 {
   font-weight: bold;
-  text-align: center;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+}
+
+.btn:hover {
+  background-color: #ff8c9b;
+  border-color: #ffffff;
+  color: #ffffff;
 }
 
 .card {
-  background-color: rgb(255, 247, 254);
-  margin: 20px auto;
-  max-width: 650px;
+  margin: 40px auto;
+  max-width: 600px;
+  padding: 15px;
 }
 
-.day {
-  font-size: 20px;
-  text-align: center;
+.current {
+  align-items: center;
+  margin: 20px 0 0;
 }
 
-.fas {
-  display: inline-block;
-  font-size: 26px;
-  text-align: center;
+.current-icon {
+  font-size: 60px;
 }
 
-.fa-cloud {
-  font-size: 65px;
-  text-align: center;
-}
-
-.search-city {
-  text-align: center;
+.footer {
+  font-size: 14px;
+  line-height: 0;
   margin: 0 auto;
-  padding: 20px;
+  max-width: 600px;
+  padding: 0 10px;
+  text-align: left;
 }
 
-.temp {
-  font-size: 20px;
-  text-align: center;
+.forecast {
+  align-items: center;
+  display: flex;
+  line-height: 48px;
+  margin: 20px 0 0;
 }
 
 .temperature {
-  font-size: 45px;
+  font-size: 36px;
   font-weight: bold;
-  line-height: 45px;
-  text-align: center;
 }
 
-.unit {
-  display: inline;
+.units {
   font-size: 16px;
   font-weight: bold;
-  text-align: center;
-}
-
-.upcoming {
-  line-height: 48px;
-  margin: 0 auto;
-  padding: 20px;
-  width: 60%;
+  position: relative;
+  top: -16px;
 }

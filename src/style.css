@@ -22,6 +22,14 @@ h1 {
   font-weight: bold;
 }
 
+p {
+  font-size: 12px;
+}
+
+li:first-letter {
+  text-transform: capitalize;
+}
+
 ul,
 li {
   list-style: none;
@@ -45,7 +53,7 @@ li {
   margin: 20px 0 0;
 }
 
-.current-icon {
+.icon {
   font-size: 60px;
 }
 

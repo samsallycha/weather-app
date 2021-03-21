@@ -21,11 +21,12 @@
   <body>
     <div class="container">
       <div class="card bg-light border-light mb-3 rounded text-center">
-        <form>
+        <form id="search-form">
           <div class="row">
             <div class="col-6">
               <input
                 type="text"
+                id="search-input"
                 class="form-control form-control-sm"
                 placeholder="Enter city"
               />
@@ -43,8 +44,10 @@
         <div class="row">
           <div class="col-6 current">
             <ul>
-              <li><i class="current-icon bi bi-sun-fill"></i></li>
-              <li><h1>Cloudy</h1></li>
+              <li><i class="icon bi bi-sun-fill"></i></li>
+              <li>
+                <h1><span class="description"></span></h1>
+              </li>
               <li>
                 <span class="temperature">7</span
                 ><span class="units">
@@ -53,8 +56,12 @@
               </li>
             </ul>
             <ul>
-              <li><h3>New York</h3></li>
-              <li><h5>Sunday 13:24</h5></li>
+              <li>
+                <h3><span class="city"></span></h3>
+              </li>
+              <li>
+                <p><span class="date"></span></p>
+              </li>
             </ul>
           </div>
           <div class="col-3 forecast forecast-days">

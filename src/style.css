@@ -5,7 +5,7 @@ a:visited {
 }
 
 a:hover {
-  color: #ff8c9b;
+  color: #ec6e4c;
   text-decoration: none;
 }
 
@@ -37,7 +37,7 @@ li {
 }
 
 .btn:hover {
-  background-color: #ff8c9b;
+  background-color: #ec6e4c;
   border-color: #ffffff;
   color: #ffffff;
 }
@@ -51,6 +51,11 @@ li {
 .current {
   align-items: center;
   margin: 20px 0 0;
+}
+
+.current .active {
+  color: #000000;
+  cursor: default;
 }
 
 .footer {

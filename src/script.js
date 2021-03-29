@@ -10,6 +10,11 @@ function search(city) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unit}&appid=${apiKey}`;
 
   axios.get(apiUrl).then(displayTemperature);
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=${unit}&appid=${apiKey}`;
+  
+  axios.get(apiUrl).then(displayForecast);
+
 }
 
 function displayTemperature(response) {
@@ -33,8 +38,27 @@ function displayTemperature(response) {
   kilometersWindSpeed = Math.round(response.data.wind.speed);
 }
 
-function formatDate(timestamp) {
-  let date = new Date(timestamp);
+function displayForecast(response) {
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = null;
+  let forecast = null;
+
+  for (let index = 0; index < 6; index++) {
+    let forecast = response.data.list[index];
+    forecastElement.innerHTML += `
+      <div class="col-2">
+        ${formatHours(forecast.dt * 1000)}
+        <br />
+        <img id="forecast-icon" src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" />
+        <br />
+        <strong>${Math.round(forecast.main.temp_max)}°</strong> ${Math.round(forecast.main.temp_min)}°
+        </div>
+        `;
+  }
+}
+
+function formatHours(timestamp) {
+   let date = new Date(timestamp);
   let hours = date.getHours();
   if (hours < 10) {
     hours = "0" + hours;
@@ -43,10 +67,15 @@ function formatDate(timestamp) {
   if (minutes < 10) {
     minutes = "0" + minutes;
   }
+  return (`${hours}:${minutes}`);
+}
+
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
   let day = date.getDay();
   let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   day = days[day];
-  return(`Last updated at ${day} ${hours}:${minutes}`);
+  return(`Last updated at ${day} ${formatHours(timestamp)}`);
 }
 
 function displayFahrenheit(event) {

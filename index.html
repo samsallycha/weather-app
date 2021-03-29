@@ -23,7 +23,7 @@
       <div class="card bg-light border-light mb-3 rounded text-center">
         <form id="search-form">
           <div class="row">
-            <div class="col-6">
+            <div class="col-7">
               <input
                 type="text"
                 id="search-input"
@@ -32,10 +32,10 @@
                 autocomplete="off"
               />
             </div>
-            <div class="col-3" id="search-button">
+            <div class="col-2" id="search-button">
               <button type="submit" class="btn-sm btn btn-dark">Search</button>
             </div>
-            <div class="col-3" id="geolocate-button">
+            <div class="col-2" id="geolocate-button">
               <button class="btn-sm btn btn-outline-secondary">
                 Geolocate
               </button>
@@ -43,7 +43,7 @@
           </div>
         </form>
         <div class="row">
-          <div class="col-6 current">
+          <div class="col-12 current">
             <ul>
               <li>
                 <img id="icon" src="" />
@@ -74,34 +74,8 @@
               </li>
             </ul>
           </div>
-          <div class="col-3 forecast forecast-days">
-            <ul>
-              <li>Monday</li>
-              <li>Tuesday</li>
-              <li>Wednesday</li>
-              <li>Thursday</li>
-              <li>Friday</li>
-            </ul>
-          </div>
-          <div class="col-1 forecast forecast-icons">
-            <ul>
-              <li><i class="bi bi-sun-fill"></i></li>
-              <li><i class="bi bi-cloud-drizzle-fill"></i></li>
-              <li><i class="bi bi-cloud-fog-fill"></i></li>
-              <li><i class="bi bi-cloud-rain-fill"></i></li>
-              <li><i class="bi bi-cloud-sun-fill"></i></li>
-            </ul>
-          </div>
-          <div class="col-1 forecast forecast-temperature">
-            <ul>
-              <li>12°</li>
-              <li>24°</li>
-              <li>42°</li>
-              <li>2°</li>
-              <li>10°</li>
-            </ul>
-          </div>
         </div>
+        <div class="row" id="forecast"></div>
       </div>
       <div class="footer">
         <small>

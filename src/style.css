@@ -95,3 +95,18 @@ li {
   position: relative;
   top: -16px;
 }
+
+#forecast {
+  font-size: 14px;
+  margin: 40px 0 10px;
+  text-align: center;
+}
+
+#forecast-icon {
+  text-align: center;
+  max-width: 60px;
+}
+
+#search-form {
+  margin-top: 10px;
+}

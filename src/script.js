@@ -51,7 +51,7 @@ function displayForecast(response) {
         <br />
         <img id="forecast-icon" src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" />
         <br />
-        <strong>${Math.round(forecast.main.temp_max)}°</strong> ${Math.round(forecast.main.temp_min)}°
+        <strong><span id="forecast-max">${Math.round(forecast.main.temp_max)}</span>°</strong> <span id="forecast-min">${Math.round(forecast.main.temp_min)}</span>°
         </div>
         `;
   }
@@ -116,6 +116,10 @@ function getCurrentPosition(position) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=${unit}&appid=${apiKey}`;
 
   axios.get(apiUrl).then(displayTemperature);
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&units=${unit}&appid=${apiKey}`;
+  
+  axios.get(apiUrl).then(displayForecast);
 }
 
 let celsiusTemperature = null;
